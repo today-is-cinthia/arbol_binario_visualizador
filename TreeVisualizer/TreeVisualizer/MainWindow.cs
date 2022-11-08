@@ -32,7 +32,6 @@ namespace TreeVisualizer
             _avlTree = new AVLTree<int>(new TreeConfiguration(circleDiameter: 45, arrowAnchorSize: 5));
 
             tabPage_BST.Controls.Add(_bstDrawBox);
-            tabPage_AVL.Controls.Add(_avlDrawBox);
         }
 
         private void btn_Insert_Click(object sender, EventArgs e)
@@ -53,11 +52,7 @@ namespace TreeVisualizer
                 _binarSearchTree.Insert(value);
                 _bstDrawBox.Print<BinarySearchTree<int>>(_binarSearchTree);
             }
-            else if (tabControl.SelectedTab == tabPage_AVL)
-            {
-                _avlTree.Insert(value);
-                _avlDrawBox.Print<AVLTree<int>>(_avlTree);
-            }
+
         }
 
         private void btn_Remove_Click(object sender, EventArgs e)
@@ -78,11 +73,12 @@ namespace TreeVisualizer
                 _binarSearchTree.Remove(value);
                 _bstDrawBox.Print<BinarySearchTree<int>>(_binarSearchTree);
             }
-            else if (tabControl.SelectedTab == tabPage_AVL)
-            {
-                _avlTree.Remove(value);
-                _avlDrawBox.Print<AVLTree<int>>(_avlTree);
-            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
