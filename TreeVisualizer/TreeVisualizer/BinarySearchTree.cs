@@ -21,6 +21,18 @@ namespace TreeVisualizer
             _root = Remove(_root, value);
         }
 
+        public List<TValue> Preorder(Node<TValue> root)
+        {
+            List<TValue> Preorderr = new List<TValue>();
+            if (root != null)
+            {
+                Preorderr.Add(root.Value);
+                Preorder(root.Left);
+                Preorder(root.Right);
+            }
+            return Preorderr;
+        }
+
         private Node<TValue> Insert(Node<TValue> root, TValue value)
         {
             if (root == null)
