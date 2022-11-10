@@ -40,6 +40,18 @@ namespace TreeVisualizer
             return root;
         }
 
+        public string PreOrder(Node<TValue> root, TValue value)
+        {
+            string recorrido = "";
+            if (root != null)
+            {
+                recorrido += root.Value.ToString();
+                PreOrder(root.Left, value);
+                PreOrder(root.Right, value);
+            }
+            return recorrido;
+        }
+
         private Node<TValue> Remove(Node<TValue> root, TValue value)
         {
             if (root == null)

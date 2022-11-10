@@ -15,5 +15,6 @@ namespace TreeVisualizer
         void Insert(TValue value);
 
         void Remove(TValue value);
+        void PreOrder(TValue value);
     }
 }
