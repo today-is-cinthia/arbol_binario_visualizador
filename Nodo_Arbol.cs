@@ -188,19 +188,22 @@ namespace prueba_arbol
             }
         }
 
+
         public void buscar(int x, Nodo_Arbol t)
         {
             if (t != null)
             {
                 if (x < t.info)
                 {
-                    buscar(x, t.Izquierdo);
+                   buscar(x, t.Izquierdo);
+                    MessageBox.Show(Convert.ToString(x));
                 }
                 else
                 {
                     if (x > t.info)
                     {
                         buscar(x, t.Derecho);
+                        MessageBox.Show(Convert.ToString(x));
                     }
                 }
             }
