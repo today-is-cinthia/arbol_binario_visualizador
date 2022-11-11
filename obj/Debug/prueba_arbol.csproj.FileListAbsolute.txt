@@ -9,3 +9,13 @@ C:\prueba_arbol\obj\Debug\prueba_arbol.csproj.GenerateResource.cache
 C:\prueba_arbol\obj\Debug\prueba_arbol.csproj.CoreCompileInputs.cache
 C:\prueba_arbol\obj\Debug\prueba_arbol.exe
 C:\prueba_arbol\obj\Debug\prueba_arbol.pdb
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\bin\Debug\prueba_arbol.exe.config
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\bin\Debug\prueba_arbol.exe
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\bin\Debug\prueba_arbol.pdb
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\obj\Debug\prueba_arbol.csprojAssemblyReference.cache
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\obj\Debug\prueba_arbol.Form1.resources
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\obj\Debug\prueba_arbol.Properties.Resources.resources
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\obj\Debug\prueba_arbol.csproj.GenerateResource.cache
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\obj\Debug\prueba_arbol.csproj.CoreCompileInputs.cache
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\obj\Debug\prueba_arbol.exe
+C:\Users\MYender\Desktop\AMOR\arbol_binario_visualizador\obj\Debug\prueba_arbol.pdb

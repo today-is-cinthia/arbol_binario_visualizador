@@ -60,21 +60,33 @@ namespace prueba_arbol
             else
             {
                 Raiz.buscar(x, Raiz);
+
+                if(Raiz.b == true)
+                {
+                    MessageBox.Show("Nodo encontrado");
+                }
             }
         }
-        public string PreOrden()
+        public String PreOrden()
         {
-            return Convert.ToString(Raiz.PreOrden(Raiz));
+            Nodo_Arbol auxi = Raiz;
+            auxi.PreOrden(auxi);
+            return auxi.preorden;
+        }
+        
+
+        public String PosOrden()
+        {
+            Nodo_Arbol auxi = Raiz;
+            auxi.PosOrden(auxi);
+            return auxi.posorden;
         }
 
-        public void PosOrden()
+        public String InOrden()
         {
-            Raiz.InOrden(Raiz);
-        }
-
-        public void InOrden()
-        {
-            Raiz.InOrden(Raiz);
+            Nodo_Arbol auxi = Raiz;
+            auxi.InOrden(auxi);
+            return auxi.inorden;
         }
 
         public void DibujarArbol(Graphics grafo, Font fuente, Brush Relleno, Brush RellenoFuente, Pen Lapiz, Brush encuentro)

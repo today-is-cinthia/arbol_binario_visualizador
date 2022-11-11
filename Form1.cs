@@ -105,9 +105,11 @@ namespace prueba_arbol
 
         private void button1_Click(object sender, EventArgs e)
         {
-          txtpre.Text =  mi_Arbol.PreOrden();
-           //mi_Arbol.PosOrden();
-           // mi_Arbol.InOrden();
+            
+            txtpre.Text = mi_Arbol.PreOrden();
+            
+            txtpost.Text = mi_Arbol.PosOrden();
+            txtin.Text = mi_Arbol.InOrden();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

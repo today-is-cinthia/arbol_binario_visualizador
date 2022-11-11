@@ -15,8 +15,13 @@ namespace prueba_arbol
         public Nodo_Arbol Izquierdo;
         public Nodo_Arbol Derecho;
         public Nodo_Arbol Padre;
+        public string preorden;
+        public string posorden;
+        public string inorden;
         public int altura;
         public int nivel;
+        public bool b = false;
+
 
         private Arbol_Binario arbol;
 
@@ -39,39 +44,37 @@ namespace prueba_arbol
             altura = 0;
         }
 
-        public string PreOrden(Nodo_Arbol t)
+        public void PreOrden(Nodo_Arbol t)
         {
-            string recorrido = "";
             if (t != null)
             {
-                recorrido +=  Convert.ToString(t);
+                preorden += Convert.ToString(t.info);
+                preorden += " ";
                 PreOrden(t.Izquierdo);
                 PreOrden(t.Derecho);
             }
-            return recorrido;
         }
 
-        public string PosOrden(Nodo_Arbol t)
+        public void PosOrden(Nodo_Arbol t)
         {
-            string recorrido = "";
             if (t != null)
             {
                 PosOrden(t.Izquierdo);
                 PosOrden(t.Derecho);
-                recorrido += Convert.ToString(t);
+                posorden += Convert.ToString(t.info);
+                posorden += " ";
+
             }
-            return recorrido;
         }
-        public string InOrden(Nodo_Arbol t)
+        public void InOrden(Nodo_Arbol t)
         {
-            string recorrido = "";
             if (t != null)
             {
                 InOrden(t.Izquierdo);
-                recorrido +=Convert.ToString(t.info);
+                inorden +=Convert.ToString(t.info);
+                inorden += " ";
                 InOrden(t.Derecho);
             }
-            return recorrido;
 
         }
         public Nodo_Arbol Insertar(int x, Nodo_Arbol t, int Level)
@@ -230,21 +233,22 @@ namespace prueba_arbol
                 if (x < t.info)
                 {
                    buscar(x, t.Izquierdo);
-                    MessageBox.Show("Valor encontrado");
                 }
                 else
                 {
                     if (x > t.info)
                     {
                         buscar(x, t.Derecho);
-                        MessageBox.Show("Valor encontrado");
                     }
                 }
+                b = true;
             }
             else
             {
+                b = false;
                 MessageBox.Show("Nodo no encontrado en el árbol", "Error de búsqueda");
             }
+
         }
 
 
