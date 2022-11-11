@@ -97,5 +97,17 @@ namespace prueba_arbol
                 txtBuscar.Focus();
             }
         }
+
+        private void txtpost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           mi_Arbol.PreOrden();
+           mi_Arbol.PosOrden();
+            mi_Arbol.InOrden();
+        }
     }
 }

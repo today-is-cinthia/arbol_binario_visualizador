@@ -17,7 +17,6 @@ namespace prueba_arbol
         public Nodo_Arbol Padre;
         public int altura;
         public int nivel;
-        public Rectangle nodo;
 
         private Arbol_Binario arbol;
 
@@ -38,6 +37,41 @@ namespace prueba_arbol
             Derecho = derecho;
             Padre = padre;
             altura = 0;
+        }
+        public string PreOrden(Nodo_Arbol t)
+        {
+            string recorrido = "";
+            if (t != null)
+            {
+                recorrido +=  t + " ";
+                PreOrden(t.Izquierdo);
+                PreOrden(t.Derecho);
+            }
+            return recorrido;
+        }
+
+        public string PosOrden(Nodo_Arbol t)
+        {
+            string recorrido = "";
+            if (t != null)
+            {
+                PosOrden(t.Izquierdo);
+                PosOrden(t.Derecho);
+                recorrido +=  t + " ";
+            }
+            return recorrido;
+        }
+
+        public string InOrden(Nodo_Arbol t)
+        {
+            string recorrido = "";
+            if (t != null)
+            {
+                InOrden(t.Izquierdo);
+                recorrido +=  t + " ";
+                InOrden(t.Derecho);
+            }
+            return recorrido;
         }
 
         public Nodo_Arbol Insertar(int x, Nodo_Arbol t, int Level)
@@ -196,14 +230,14 @@ namespace prueba_arbol
                 if (x < t.info)
                 {
                    buscar(x, t.Izquierdo);
-                    MessageBox.Show(Convert.ToString(x));
+                    MessageBox.Show("Valor encontrado");
                 }
                 else
                 {
                     if (x > t.info)
                     {
                         buscar(x, t.Derecho);
-                        MessageBox.Show(Convert.ToString(x));
+                        MessageBox.Show("Valor encontrado");
                     }
                 }
             }
@@ -212,6 +246,7 @@ namespace prueba_arbol
                 MessageBox.Show("Nodo no encontrado en el árbol", "Error de búsqueda");
             }
         }
+
 
         /*Funciones para el dibujo de los nodos*/
         private const int Radio = 30;

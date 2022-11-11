@@ -62,6 +62,22 @@ namespace prueba_arbol
                 Raiz.buscar(x, Raiz);
             }
         }
+        public void PreOrden()
+        {
+           MessageBox.Show(Raiz.PreOrden(Raiz));
+        }
+
+        public void PosOrden()
+        {
+            MessageBox.Show(Raiz.PosOrden(Raiz));
+
+        }
+
+        public void InOrden()
+        {
+            MessageBox.Show(Raiz.InOrden(Raiz));
+        }
+
         public void DibujarArbol(Graphics grafo, Font fuente, Brush Relleno, Brush RellenoFuente, Pen Lapiz, Brush encuentro)
         {
             int x = 400;
