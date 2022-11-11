@@ -38,12 +38,13 @@ namespace prueba_arbol
             Padre = padre;
             altura = 0;
         }
+
         public string PreOrden(Nodo_Arbol t)
         {
             string recorrido = "";
             if (t != null)
             {
-                recorrido +=  t + " ";
+                recorrido +=  Convert.ToString(t);
                 PreOrden(t.Izquierdo);
                 PreOrden(t.Derecho);
             }
@@ -57,23 +58,22 @@ namespace prueba_arbol
             {
                 PosOrden(t.Izquierdo);
                 PosOrden(t.Derecho);
-                recorrido +=  t + " ";
+                recorrido += Convert.ToString(t);
             }
             return recorrido;
         }
-
         public string InOrden(Nodo_Arbol t)
         {
             string recorrido = "";
             if (t != null)
             {
                 InOrden(t.Izquierdo);
-                recorrido +=  t + " ";
+                recorrido +=Convert.ToString(t.info);
                 InOrden(t.Derecho);
             }
             return recorrido;
-        }
 
+        }
         public Nodo_Arbol Insertar(int x, Nodo_Arbol t, int Level)
         {
             if (t == null)
