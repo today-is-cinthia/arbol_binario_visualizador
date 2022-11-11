@@ -65,5 +65,37 @@ namespace prueba_arbol
             g=e.Graphics;
             mi_Arbol.DibujarArbol(g, this.Font, Brushes.Blue, Brushes.White, Pens.Black, Brushes.White);
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (txtEliminar.Text == "")
+            {
+                MessageBox.Show("Debe Ingresar un Valor");
+            }
+            else
+            {
+                Dato = int.Parse(txtEliminar.Text);
+                mi_Arbol.Eliminar(Dato);
+                txtEliminar.Clear();
+                txtEliminar.Focus();
+                Refresh();
+                Refresh();
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                MessageBox.Show("Debe Ingresar un Valor");
+            }
+            else
+            {
+                Dato = int.Parse(txtBuscar.Text);
+                mi_Arbol.Buscar(Dato);
+                txtBuscar.Clear();
+                txtBuscar.Focus();
+            }
+        }
     }
 }

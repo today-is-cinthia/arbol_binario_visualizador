@@ -50,11 +50,24 @@ namespace prueba_arbol
                 Raiz.Eliminar(x, ref Raiz);
             }
         }
+        public void Buscar(int x)
+        {
+            if (Raiz == null)
+            {
+                Raiz = new Nodo_Arbol(x, null, null, null);
+
+            }
+            else
+            {
+                Raiz.buscar(x, Raiz);
+            }
+        }
         public void DibujarArbol(Graphics grafo, Font fuente, Brush Relleno, Brush RellenoFuente, Pen Lapiz, Brush encuentro)
         {
             int x = 400;
             int y = 75;
             if (Raiz == null) return;
+            Raiz.PosicionNodo(ref x, y);
             Raiz.DibujarRamas(grafo, Lapiz);
             Raiz.DibujarNodo(grafo, fuente, Relleno, RellenoFuente, Lapiz, encuentro);
         }
